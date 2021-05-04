@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "484636345704",
+    "project_id": "kotlin-otp-crud",
+    "storage_bucket": "kotlin-otp-crud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484636345704:android:3be3189513a6751fe002dd",
+        "android_client_info": {
+          "package_name": "com.example.semantic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484636345704-1obfbkm04ai2epha0lgikv457e7va6kh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.semantic",
+            "certificate_hash": "8e9096feec4880a8336c73454694cbb38244ab4e"
+          }
+        },
+        {
+          "client_id": "484636345704-s63cvfme83qk28shd78aq9ctv8s30r9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7ynxWaz9yR8YI53r_qobxvk8Fbchb2vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484636345704-s63cvfme83qk28shd78aq9ctv8s30r9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

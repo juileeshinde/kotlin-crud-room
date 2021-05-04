@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/otp_gradient">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputMobileNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/ErrorAppearance"
+                    app:hintTextAppearance="@color/gray"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline15"
+                    app:layout_constraintStart_toStartOf="@+id/guideline14"
+                    app:layout_constraintTop_toTopOf="@+id/guideline12">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/transparent"
+                        android:hint="mobile number"
+                        android:ems="10"
+                        android:maxLength="10"
+                        android:inputType="phone"
+                        android:textColorHighlight="#E79FA5"
+                        android:textColorLink="#FFFFFF" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingStart="50dp"
+            android:paddingLeft="50dp"
+            android:paddingEnd="50dp"
+            android:paddingRight="50dp"
+            android:background="@drawable/rounded_button"
+            android:text="SEND OTP"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/inputMobileNo"
+            app:layout_constraintStart_toStartOf="@+id/inputMobileNo"
+            app:layout_constraintTop_toBottomOf="@+id/inputMobileNo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_otp_pin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/guideline15"
+            app:layout_constraintStart_toStartOf="@+id/guideline14"
+            app:layout_constraintTop_toBottomOf="@+id/btnSendOtp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etOTP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="number"
+                android:hint="OTP"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVerify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_button"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingEnd="60dp"
+                android:paddingRight="60dp"
+                android:text="VERIFY"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etOTP" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95507485" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/successfulImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/correct"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/constraint_otp_pin"
+            app:layout_constraintStart_toStartOf="@+id/constraint_otp_pin"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_otp_pin"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtSuccessfulmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Verification Successfull.."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/successfulImg"
+            app:layout_constraintStart_toStartOf="@+id/successfulImg"
+            app:layout_constraintTop_toBottomOf="@+id/successfulImg"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtNextInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="click NEXT to continue"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/txtSuccessfulmsg"
+            app:layout_constraintStart_toStartOf="@+id/txtSuccessfulmsg"
+            app:layout_constraintTop_toBottomOf="@+id/txtSuccessfulmsg"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:drawableRight="@drawable/ic_next_button"
+            android:paddingStart="60dp"
+            android:paddingLeft="60dp"
+            android:paddingEnd="60dp"
+            android:paddingRight="60dp"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline15"
+            app:layout_constraintStart_toStartOf="@+id/guideline14"
+            app:layout_constraintTop_toBottomOf="@+id/txtNextInfo"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtTimerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="abc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/btnSendOtp"
+            app:layout_constraintStart_toStartOf="@+id/btnSendOtp"
+            app:layout_constraintTop_toBottomOf="@+id/btnSendOtp"
+            tools:visibility="gone" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
